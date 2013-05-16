@@ -4436,7 +4436,7 @@ Fails if working tree or staging area contain uncommitted changes.
              parent)
     (magit-save-some-buffers)
     (apply #'magit-run-git
-           "checkout" "-b"
+           "checkout" "-t" "-b" 
            branch
            (append magit-custom-options (list (magit-rev-to-git parent))))
     (magit-update-vc-modeline default-directory)))
